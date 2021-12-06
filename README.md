@@ -1,5 +1,7 @@
 # CountriesApp
 
+This project is for `FrontEnd` and `DevOps` practices with `Angular` and `Azure Cloud` with `CI/CD`.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
 ## Development server
