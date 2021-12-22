@@ -17,14 +17,15 @@ import { ShowCountryComponent } from './pages/show-country/show-country.componen
     ShowCountryComponent
   ],
   exports:[
+    
     ByCapitalComponent,
     ByRegionComponent,
     ByCountryComponent,
-    ShowCountryComponent,
-    FormsModule
+    ShowCountryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class CountryModule { }
