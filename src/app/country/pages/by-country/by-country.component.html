@@ -15,11 +15,11 @@
     </div>
 </div>
 <hr>
-<div class="alert alert-danger">
+<div *ngIf="thereError" class="alert alert-danger">
   Not found any result with term: Search Term
 </div>
 
-<div class="row">
+<div *ngIf="!thereError" class="row">
     <div class="col">
         <table class="table table-hover">
             <thead>
