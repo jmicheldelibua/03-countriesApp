@@ -4,6 +4,10 @@ This project is for `FrontEnd` and `DevOps` practices with `Angular` and `Azure 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
+## Production server
+
+Go to [https://zealous-hill-06582be0f.azurestaticapps.net](https://zealous-hill-06582be0f.azurestaticapps.net) to see this App working in `Azure Cloud` with [CI/CD](https://github.com/jmicheldelibua/03-countriesApp/actions).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
