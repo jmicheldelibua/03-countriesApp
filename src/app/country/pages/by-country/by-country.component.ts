@@ -24,7 +24,6 @@ export class ByCountryComponent{
     this.countryService.searchCountryByName( term )
     .subscribe( 
       countries => {
-        console.log(countries);
         this.countries = countries;
       },
       error =>{

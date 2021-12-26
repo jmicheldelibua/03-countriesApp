@@ -25,4 +25,12 @@ export class CountryService {
     return this.http.get<Country[]>( url );
   }
 
+  searchCountryByFifaCode( fifaCode: string) : Observable<Country>
+  {
+    const url: string = `${this.apiUrl}/alpha/${ fifaCode }`;
+    return this.http.get<Country>( url );
+
+    
+  }
+
 }
