@@ -2,16 +2,12 @@
 <hr>
 <div class="row">
     <div class="col">
-        <form (ngSubmit)="search()" autocomplete="off">
-            <input  
-                    type="text"
-                    name="term"
-                    class="form-control"
-                    [(ngModel)]="term"
-                    placeholder="Search country..."
-                    value="hghgh"
-                />
-        </form>
+       <app-country-input
+       (onEnter)="search( $event )"
+       (OnDebounce)="suggestions( $event )"
+       placeholder="Search country by Country Name"
+       >
+    </app-country-input>
     </div>
 </div>
 <hr>
@@ -21,25 +17,6 @@
 
 <div *ngIf="!thereError" class="row">
     <div class="col">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th> #</th>
-                    <th> Flag</th>
-                    <th> Name</th>
-                    <th> Population</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Flag 1</td>
-                    <td>Name 1</td>
-                    <td>Population 1</td>
-                    <td> <a href="/country/1"> See more...</a> </td>
-                </tr>
-            </tbody>
-        </table>
+       <app-country-table [countries]="countries"> </app-country-table>
     </div>
 </div>

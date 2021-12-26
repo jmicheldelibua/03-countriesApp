@@ -1,0 +1,23 @@
+<table class="table table-hover" *ngIf="countries.length > 0">
+      <thead>
+          <tr>
+              <th> #</th>
+              <th> Flag</th>
+              <th> Name</th>
+              <th> Population</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let c of countries; let i = index;">
+              <td>{{ i }}</td>
+              <td>
+                  <img class="small-flag" src="{{ c.flags.png }}" alt="img"/>
+              </td>
+              <td>{{ c.capital }} , {{ c.name.official }}</td>
+              <td>{{ c.population | number }} </td>
+              <!-- <td> <a href="/country/{{c.idd}}"> See more...</a> </td> -->
+              <td> <a [routerLink]="[ '/country', c.fifa ]"> See more...</a> </td>
+          </tr>
+      </tbody>
+  </table>
