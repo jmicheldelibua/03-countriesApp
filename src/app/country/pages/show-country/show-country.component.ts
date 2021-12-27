@@ -12,6 +12,7 @@ import { Country } from '../../interfaces/county-interfaces';
 })
 export class ShowCountryComponent implements OnInit {
 
+  // country: Country | undefined;
   country!: Country;
 
   constructor( 
@@ -21,12 +22,12 @@ export class ShowCountryComponent implements OnInit {
 
   ngOnInit(): void {
     //NEW METHOD
-    this.activatedRuote.params.
-    pipe(
-      switchMap( ({ id }) => this.countryService.searchCountryByFifaCode( id ) ),
-      tap( console.log ) // SAME <=> tap( resp => console.log(resp  ) )
-    ).
-    subscribe( country => this.country = country.shift() );
+    this.activatedRuote.params
+    .pipe(
+      switchMap( ({ id }) => this.countryService.searchCountryByFifaCode( id ) )
+      //, tap( console.log ) // SAME <=> , tap( resp => console.log( resp ) ) //For this case , tap( resp => console.log( resp.shift()  ) )
+    )
+    .subscribe( country => this.country = country.shift()! );
     
     /* OLD METHOD
       this.activatedRuote.params

@@ -29,10 +29,10 @@ export class CountryService {
     return this.http.get<Country[]>( url, { params: this.httpParams} );
   }
 
-  searchCountryByFifaCode( fifaCode: string) : Observable<Country>
+  searchCountryByFifaCode( fifaCode: string) : Observable<Country[]>
   {
     const url: string = `${this.apiUrl}/alpha/${ fifaCode }`;
-    return this.http.get<Country>( url );
+    return this.http.get<Country[]>( url );
   }
 
   searchCountryByRegion( region: string) : Observable<Country[]>

@@ -1,5 +1,5 @@
 <div class="animate__animated animate__fadeIn animate__faster">
-  <h2>By Country</h2>
+  <h3>Search by Country Name</h3>
   <hr>
 </div>
 
@@ -8,7 +8,7 @@
        <app-country-input
        (onEnter)="search( $event )"
        (OnDebounce)="suggestions( $event )"
-       placeholder="Search country by Country Name"
+       placeholder="Start typing a Country Name"
        >
     </app-country-input>
     </div>
@@ -25,7 +25,7 @@
   </a>
  </li>
 
- <li  class="list-group-item list-group-item-action">
+ <li *ngIf="isValidTerm" class="list-group-item list-group-item-action">
     <a 
     class="nav-link"
     (click)="search( term )"

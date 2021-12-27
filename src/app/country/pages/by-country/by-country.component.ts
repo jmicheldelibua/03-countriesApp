@@ -21,13 +21,21 @@ export class ByCountryComponent{
   suggestedCountries: Country[] = [];
   showSuggestions: boolean = false;
 
+  get isValidTerm(){
+    return this.term.trim().length;
+  }
+
   constructor( private countryService: CountryService) { }
 
   search( term: string)
   {
+
     this.thereError = false;
     this.term = term;
     this.showSuggestions = false;
+
+    if(!this.isValidTerm){ return; }
+
     this.countryService.searchCountryByName( term )
     .subscribe( 
       countries => {
@@ -44,6 +52,9 @@ export class ByCountryComponent{
     this.thereError = false;
     this.showSuggestions = true;
     this.term = term;
+    
+    if(!this.isValidTerm){ return; }
+
     this.countryService.searchCountryByName( term )
     .subscribe( 
       countries => this.suggestedCountries = countries.splice(0,5),

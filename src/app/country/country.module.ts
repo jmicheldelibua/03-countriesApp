@@ -19,10 +19,9 @@ import { CountryInputComponent } from './components/country-input/country-input.
     ByCountryComponent,
     ShowCountryComponent,
     CountryTableComponent,
-    CountryInputComponent
+    CountryInputComponent,
   ],
   exports:[
-    
     ByCapitalComponent,
     ByRegionComponent,
     ByCountryComponent,

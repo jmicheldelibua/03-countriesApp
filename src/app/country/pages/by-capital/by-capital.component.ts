@@ -24,7 +24,6 @@ export class ByCapitalComponent  {
     this.countryService.searchCountryByCapital( term )
     .subscribe( 
       countries => {
-        console.log(countries);
         this.countries = countries;
       },
       error =>{
